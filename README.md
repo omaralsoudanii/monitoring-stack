@@ -45,5 +45,5 @@ Read the docs first, so you don't complain about how I ruined your environment, 
 - Create dashboards, enable plugins, and **telegraf** output & input modules based on your needs
 - This is a simple dashboard with the default configs
 
-[TIG Stack](https://github.com/omaralsoudanii/monitoring-stack/blob/main/dashboard.png)
+![TIG Stack](https://user-images.githubusercontent.com/7079173/130809122-9a14787b-6a92-4a6c-b36e-cfb81d6409f7.png)
 
