@@ -1,0 +1,5 @@
+.env.grafana.example
+.env.influx.example
+*.md
+.gitignore
+dashboard.png
