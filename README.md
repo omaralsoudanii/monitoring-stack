@@ -47,3 +47,10 @@ Read the docs first, so you don't complain about how I ruined your environment, 
 
 ![TIG Stack](https://user-images.githubusercontent.com/7079173/130809122-9a14787b-6a92-4a6c-b36e-cfb81d6409f7.png)
 
+## Note
+
+Usually the way this is done is that you install InfluxDb and Grafana on 1 server, and telegraf acts as agent on other servers (the want we want to get data from),
+however this repo is for demonstration purpose, you can remove telegraf from the setup and install it individually (in automated fashion) on your cluster of servers.
+
+For production it's obvious that you should change some of the configs (certs, authentication methods) and add a reverse proxy to serve the stack (I recommend HAProxy).
+
