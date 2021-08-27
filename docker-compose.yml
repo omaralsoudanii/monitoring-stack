@@ -1,14 +1,14 @@
 version: "3.6"
 services:
-  mk-influxdb2:
-    container_name: mk-influxdb2
+  mk-influxdb:
+    container_name: mk-influxdb
     image: influxdb:1.8-alpine
     restart: unless-stopped
     ports:
       - "8086:8086"
     volumes:
-      - ./influxdb2/influxdb.conf:/etc/influxdb/influxdb.conf:ro
-      - mk-influxdb2-data:/var/lib/influxdb:rw
+      - ./influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
+      - mk-influxdb-data:/var/lib/influxdb:rw
     env_file: 
       - .env.influx
     networks:
@@ -18,6 +18,7 @@ services:
     container_name: mk-telegraf
     image: telegraf:1.19.3-alpine
     restart: unless-stopped
+    hostname: mkreg.dev
     ports:
       - "9043:9042"
     volumes:
@@ -45,9 +46,9 @@ networks:
     mk_bridge_net:
 
 volumes:
-  mk-influxdb2-data:
+  mk-influxdb-data:
     driver: local
-    name: mk-influxdb2-data
+    name: mk-influxdb-data
   mk-grafana-data:
     driver: local
     name: mk-grafana-data
