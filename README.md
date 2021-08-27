@@ -17,9 +17,6 @@ The stack is built via docker so it should run out of the box (it should...)
 
     ```bash
     $ git clone https://github.com/omaralsoudanii/monitoring-stack
-    $ cd monitoring-stack
-    $ docker-compose up --build -d
-    $ docker ps
     ```
 
 - Create a `.env.grafana` file similar to [`.env.grafana.example`](https://github.com/omaralsoudanii/monitoring-stack/blob/main/.env.grafana.example)
